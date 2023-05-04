@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+<body>
+    <script>
+        var inpLargura, inpComprimento, inpPreco //Definindo variaveis para ENTRADA
+
+            inpLargura = parseFloat(prompt("Insira a Largura do terreno: ")) //ENTRADA
+            inpComprimento = parseFloat(prompt("Insira o Comprimento do terreno: ")) //ENTRADA
+            inpPreco = parseFloat(prompt("Insira o preço do Metro Quadrado: ")) //ENTRADA
+
+        var tamanho, preco //Fazendo o processamento
+
+            tamanho = inpLargura * inpComprimento //Calculando o Tamanho do Terreno
+            preco = tamanho * inpPreco //Calculando o Preco do Terreno
+            
+            //Imprimindo as saídas
+            document.write("<hr>")
+            document.write("O Tamanho do terreno é: ", tamanho)
+            document.write("<hr>")
+            document.write("O valor do terreno é: ", preco)
+            document.write("<hr>")
+
+    </script>
+</body>
+</html>
