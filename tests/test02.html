@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style>
+        #toggle-button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        }
+
+        #input {
+        width: 200px;
+        height: 30px;
+        padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Olá</h1>
+    <button id="toggle-button">Mostrar/Esconder Input</button>
+    <input id="input" type="text" style="display: none;">
+
+    <script>
+        const button = document.querySelector('#toggle-button');
+        const input = document.querySelector('#input');
+
+        button.addEventListener('click', () => {
+        if (input.style.display === 'none') {
+            input.style.display = 'block';
+        } else {
+            input.style.display = 'none';
+        }
+        });
+    </script>
+</body>
+</html>
