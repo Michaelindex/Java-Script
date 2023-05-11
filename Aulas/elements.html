@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElements</title>
+</head>
+<body>
+    <ul id="lista">
+        <li id="um">inicio</li>
+        <li id="dois">home</li>
+        <li id="tres">sobre</li>
+        <li id="quatro">projetos</li>
+    </ul>
+    <ul class="produtos">
+        <li class="itens">inicio</li>
+        <li class="itens">home</li>
+        <li class="itens">sobre</li>
+        <li class="itens">projetos</li>
+    </ul>
+    <div>
+        <ul>
+            <li>incio</li>
+            <li>home</li>
+            <li>sobre</li>
+            <li>projetos</li>
+        </ul>
+    </div>
+    <script>
+        var lista = document.getElementById('lista') //pegando o elemento com id="lista"
+            var um = document.getElementById('um') //pegnado o elemento com id="um"
+            var dois = document.getElementById('dois') //pegnado o elemento com id="dois"
+            var tres = document.getElementById('tres') //pegnado o elemento com id="tres"
+            var quatro = document.getElementById('quatro') //pegnado o elemento com id="quatro"
+        
+        var item = document.getElementsByTagName('li') //pegando os elementos que são <li>
+            var itens = document.getElementsByClassName('produtos') //pegando os elementos com a class="produtos"
+
+        var produtos = document.querySelectorAll('.produtos') //pegando todos os elementos com a class="produtos"
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        var lista = document.querySelector('#lista') //definindo o id="lista" ao variação lista
+        var todosFilhos = lista.children //selecionando os filhos do variação lista
+        var pai = lista.parentNode //selecionando o pai do variação lista
+
+        console.log(lista)
+        console.log(todosFilhos)
+        console.log(pai)
+        
+    </script>
+</body>
+</html>
