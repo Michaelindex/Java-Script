@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vetor</title>
+</head>
+<body>
+    <script>
+        var muie = ['Lauren','Lais','Camila','Dani']
+        console.log(muie)
+        document.write(muie+'<br><br>')
+        for (var i=0; i<muie.length;i++){
+            document.write(muie[i]+'<br>')
+        }
+        document.write('<hr>')
+        muie.unshift('Marlene')
+        muie.push('Sinara')
+        document.write(muie)
+    </script>
+
+    <script>
+        function exibirVetor(vetor){
+            console.log(vetor)
+            document.write(vetor+'<hr>')
+            for (var i=0;i<vetor.length;i++){
+                document.write(vetor[i]+'<br>')
+            }
+
+        }
+    </script>
+</body>
+</html>
