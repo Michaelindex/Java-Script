@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="relogio"></h2>
+    <button id="clickme" onclick="mostrar()">
+        Click me
+    </button>
+    <script>
+        var relogio = document.getElementById('relogio')
+        var clickme = document.getElementById('clickme')
+        function mostrarHora(){
+            const d = new Date()
+            relogio.innerHTML = d.toLocaleTimeString()
+        }
+        
+        function mostrar(){
+            clickme.style.display = 'block'
+            setInterval(mostrarHora, 1000)
+        }
+        clickme.addEventListener('click', ()=> {
+            if (relogio.style.display === 'none'){
+                relogio.style.display = 'block'
+            } else{
+                relogio.style.display = 'none'
+            }
+        })
+
+    </script>
+</body>
+</html>
