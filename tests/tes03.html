@@ -22,11 +22,10 @@
         <h1 id="soma"></h1>
     </div>
     <script>
-        var numberOne, numberTwo;
-        numberOne = document.querySelector('#numberOne').value;
-        numberTwo = document.querySelector('#numberTwo').value;
-    
         function soma() {
+            var numberOne, numberTwo;
+            numberOne = document.querySelector('#numberOne').value;
+            numberTwo = document.querySelector('#numberTwo').value;
             var result = parseInt(numberOne) + parseInt(numberTwo);
             document.getElementById("soma").innerHTML = result;
         }
