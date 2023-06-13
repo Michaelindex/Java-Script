@@ -18,15 +18,15 @@
         <input type="text" name="numberOne" id="numberOne">
         <input type="text" name="numberTwo" id="numberTwo">
         <button type="reset" style="width: 100px; height: 30px; border-radius: 15px; border: 1px solid black;">RESET</button>
-        <button type="submit" style="width: 100px; height: 30px; border-radius: 15px; border: 1px solid black;">SOMA</button>
+        <button type="submit" style="width: 100px; height: 30px; border-radius: 15px; border: 1px solid black;" onclick="soma()">SOMA</button>
+        <h1 id="soma"></h1>
     </div>
-    <h1 id="soma"></h1>
     <script>
         var numberOne, numberTwo
         numberOne = document.querySelector('#numberOne')
-        numberTwo = document.querySelector('#numberTwo')
+        numberTwo = parseInt( document.querySelector('#numberTwo')
         function soma(){
-            document
+            document.getElementById("soma").innerHTML = numberOne + numberTwo;
         }
     </script>
 </body>
