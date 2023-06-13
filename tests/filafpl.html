@@ -5,51 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FILAFPL</title>
     <style>
-        button{
+        div{
             width: 100vw;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+        button{
+            width: 200px;
+            height: 50px;
+            background-color: rgba(0, 0, 139, 0.719);
+            border-radius: 15px;
+            border: none;
+            box-shadow: 3px 0px 2px blue;
+        }
     </style>
 </head>
 <body>
-    <button onclick="filafpl()">Enviar Requisição</button>
-    <script>function filafpl(){
-        var request = require('request');
-    
+    <div><button onclick="filafpl()">Enviar Requisição</button></div>
+    <script>
+        function filafpl() {
+        // Coloque todo o código da requisição aqui
+        // Certifique-se de importar as bibliotecas necessárias, se aplicável
+
+        // Set the API endpoint
         var url = "https://api.faceit.com/queue/v2/player";
+
+        // Set the request headers
         var headers = {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer 64193c63-1f06-4dc7-b36d-99061618029b"
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 64193c63-1f06-4dc7-b36d-99061618029b"
         };
-    
+
+        // Set the request data
         var data = {
-        "entityId": "c1686bfd-3737-4e61-93b8-474b4e48d059",
-        "entityType": "hub",
-        "leaderId": "f4f8db79-0e8a-4a12-a2f0-fee9537219e7",
-        "playerId": "f4f8db79-0e8a-4a12-a2f0-fee9537219e7",
-        "playerType": "solo",
-        "userIds": ["f4f8db79-0e8a-4a12-a2f0-fee9537219e7"],
-        "0": "f4f8db79-0e8a-4a12-a2f0-fee9537219e7"
+            "entityId" : "c1686bfd-3737-4e61-93b8-474b4e48d059",
+            "entityType" : "hub",
+            "leaderId": "f4f8db79-0e8a-4a12-a2f0-fee9537219e7",
+            "playerId": "f4f8db79-0e8a-4a12-a2f0-fee9537219e7",
+            "playerType": "solo",
+            "userIds" : ["f4f8db79-0e8a-4a12-a2f0-fee9537219e7"],
+            "0" : "f4f8db79-0e8a-4a12-a2f0-fee9537219e7"
         };
-    
-        var options = {
-        url: url,
-        headers: headers,
-        body: JSON.stringify(data)
-        };
-    
-        request.post(options, function(error, response, body) {
-        if (!error && response.statusCode == 200) {
-            console.log(response.statusCode);
-            console.log(JSON.parse(body));
-        } else {
-            console.log(response.statusCode);
-            console.log(body);
-        }
+
+        // Convert the data to json format
+        var payload = JSON.stringify(data);
+
+        // Make the request
+        fetch('https://api.faceit.com/queue/v2/player', {
+            method: 'POST',
+            headers: headers,
+            body: payload
+        })
+        .then(response => {
+            // Handle the response here
+            console.log(response.status);
+            return response.json();
+        })
+        .then(data => {
+            // Handle the response data here
+            console.log(data);
+        })
+        .catch(error => {
+            // Handle any errors that occurred
+            console.log(error);
         });
-    }</script>
+        }
+
+    </script>
 </body>
 </html>
