@@ -44,24 +44,25 @@
     </div>
     <script>
         var btnPesquisar=document.querySelector('[btn-submit]')
-        event.preventDefault()
-        const form=document.forms[0]
-        let cep = form.cep.value
-        let url = `https://viacep.com.br/ws/${cep}/json`
-        fetch (url)
-            .then(resposta=>resposta.json())
-            .then(resposta=>{
-                console.log(resposta)
-                form.endereco.value=resposta.logradoura
-                form.bairro.value=resposta.bairro
-                form.cidade.value=resposta.localidade
-                form.uf.value=resposta.uf
-            })
-            .catch(erro=>{
-                console.log(erro)
-                alert('Não foi possível realizar a consulta. Insira um CEP válido.')
-                form.cep.value=' '
-            })
+        btnPesquisar.onclick=(event)=>{
+            event.preventDefault()
+            const form=document.forms[0]
+            let cep = form.cep.value
+            let url = `https://viacep.com.br/ws/${cep}/json`
+            fetch (url)
+                .then(resposta=>resposta.json())
+                .then(resposta=>{
+                    console.log(resposta)
+                    form.endereco.value=resposta.logradouro
+                    form.bairro.value=resposta.bairro
+                    form.cidade.value=resposta.localidade
+                    form.uf.value=resposta.uf
+                })
+                .catch(erro=>{
+                    console.log(erro)
+                    alert('Não foi possível realizar a consulta. Insira um CEP válido.')
+                })
+        }
     </script>
 </body>
 </html>
