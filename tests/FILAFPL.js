@@ -1,7 +1,7 @@
 
 var request = require('request');
 
-var url = "https://api.faceit.com/queue/v2/player";
+var url = "###https://api.faceit.com/queue/v2/player###";
 var headers = {
 "Content-Type": "application/json",
 "Authorization": "Bearer #"
