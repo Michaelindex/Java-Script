@@ -8,13 +8,13 @@ var headers = {
 };
 
 var data = {
-"entityId": "#c1686bfd-3737-4e61###-93b8-474b4e48d059#",
+"entityId": "#c1686bfd-3737-4e61-93b8-474b4e48d059#",
 "entityType": "hub",
-"leaderId": "f4f8db79-0e8a-4a12-a2f0-fee9537219e7",
-"playerId": "f4f8db79-0e8a-4a12-a2f0-fee9537219e7",
+"leaderId": "f4f8db79-0e8a-4a12###-a2f0-fee9537219e7",
+"playerId": "f4f8db79-0e8a-4a12###-a2f0-fee9537219e7",
 "playerType": "solo",
-"userIds": ["f4f8db79-0e8a-4a12-a2f0-fee9537219e7"],
-"0": "f4f8db79-0e8a-4a12-a2f0-fee9537219e7"
+"userIds": ["f4f8db79-0e8a-4a12###-a2f0-fee9537219e7"],
+"0": "f4f8db79-0e8a-4a12###-a2f0-fee9537219e7"
 };
 
 var options = {
