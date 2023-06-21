@@ -42,12 +42,12 @@
             event.preventDefault()
             const form=document.forms[0]
             let cep = form.cep.value
-            let usdbrl = 'https://economia.awesomeapi.com.br/json/last/BRL-USD'
+            let usdbrl = 'https://economia.awesomeapi.com.br/json/last/USD-BRL'
             fetch (usdbrl)
                 .then(resposta=>resposta.json())
                 .then(resposta=>{
                     console.log(resposta)
-                    form.result.value= resposta.BRLUSD.ask * cep
+                    form.result.value= (parseFloat(cep) / parseFloat(resposta.USDBRL.ask)).toFixed(2)
                 })
                 .catch(erro=>{
                     console.log(erro)
