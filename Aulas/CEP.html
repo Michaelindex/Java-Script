@@ -14,7 +14,7 @@
     <div class="container">
         <div class="card-header bg-success">
             <div class="card"> <!--Entradas - Campos e botão-->
-                <h1 class="text-center">Consultar CEP</h1>
+                <h1 class="text-center">CONSULTAR O DOLAR</h1>
             </div>
         </div>
         <div class="card-body bg-dark">
@@ -27,8 +27,8 @@
                         </div>
                         <div class="row">
                             <div class="col-12 my-1 py-1">
-                                <label for="endereco" class="form-label text-light mt-1">Rua</label>
-                                <input class="form-control" name="endereco" placeholder="AQUI O RESULTADO" disabled >
+                                <label for="result" class="form-label text-light mt-1">USD</label>
+                                <input class="form-control" name="result" placeholder="AQUI O RESULTADO" disabled >
                             </div>
                         </div>
                     </div>
@@ -42,15 +42,12 @@
             event.preventDefault()
             const form=document.forms[0]
             let cep = form.cep.value
-            let url = `https://viacep.com.br/ws/${cep}/json`
-            fetch (url)
+            let usdbrl = 'https://economia.awesomeapi.com.br/json/last/BRL-USD'
+            fetch (usdbrl)
                 .then(resposta=>resposta.json())
                 .then(resposta=>{
                     console.log(resposta)
-                    form.endereco.value=resposta.logradouro
-                    form.bairro.value=resposta.bairro
-                    form.cidade.value=resposta.localidade
-                    form.uf.value=resposta.uf
+                    form.result.value= resposta.BRLUSD.ask * cep
                 })
                 .catch(erro=>{
                     console.log(erro)
