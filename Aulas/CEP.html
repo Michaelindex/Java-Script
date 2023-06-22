@@ -42,8 +42,8 @@
             event.preventDefault()
             const form=document.forms[0]
             let cep = form.cep.value
-            let usdbrl = 'https://economia.awesomeapi.com.br/json/last/USD-BRL'
-            fetch (usdbrl)
+            let usdbrl = 'https://economia.awesomeapi.com.br/json/last/USD-BRL' //aqui a API
+            fetch (usdbrl) 
                 .then(resposta=>resposta.json())
                 .then(resposta=>{
                     console.log(resposta)
