@@ -43,7 +43,7 @@
             const form=document.forms[0]
             let cep = form.cep.value
             let usdbrl = 'https://economia.awesomeapi.com.br/json/last/USD-BRL' //aqui a API
-            fetch (usdbrl) 
+            fetch (usdbrl) //aqui é o fetch API
                 .then(resposta=>resposta.json())
                 .then(resposta=>{
                     console.log(resposta)
