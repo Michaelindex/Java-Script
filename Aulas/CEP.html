@@ -49,7 +49,7 @@
                     console.log(resposta)
                     form.result.value= (parseFloat(cep) / parseFloat(resposta.USDBRL.ask)).toFixed(2)
                 })
-                .catch(erro=>{
+                .catch(erro=>{ //aqui é caso não funcione
                     console.log(erro)
                     alert('Não foi possível realizar a consulta. Insira um CEP válido.')
                 })
