@@ -15,7 +15,7 @@
             </div>
             <div class="">
                 <div class="d-flex justify-content-center align-itens-center w-75 mx-auto">
-                    <select class="form-control my-5 mx-5 p-3"  name="cidade" id="slCidade">
+                    <select class="form-control my-5 mx-5 p-3"  name="cidade" id="slCidade" onchange="obterDados()">
                         <option value="catanduva,br">Catanduva-SP Brasil</option>
                         <option value="tokyo,jp">Tókyo-KA Japão</option>
                         <option value="berlin,de">Berlin Alemanha</option>
@@ -23,14 +23,15 @@
                     </select>
                 </div>
                 <div class="card-text text-center">
-                    <h2>Ceu: <span id="ceu"></span></h2>
-                    <h2>Cidade: <span id="cidade"></span></h2>
-                    <h2>Temperatura: <span id="temperatura"></span></h2>
-                    <h2>Temp. Minima: <span id="tempMin"></span> </h2>
-                    <h2>Temp. Máxima: <span id="tempMax"></span> </h2>
+                    <h2>Ceu: </h2><p id="ceu"></p>
+                    <h2>Cidade: </h2><p id="cidade"></p>
+                    <h2>Temperatura: </h2><p id="temperatura"></p>
+                    <h2>Temp. Minima: </h2><p id="tempMin"></p>
+                    <h2>Temp. Máxima: </h2><p id="tempMax"></p>
                 </div>
             </div>
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
