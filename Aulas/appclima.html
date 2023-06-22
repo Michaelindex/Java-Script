@@ -9,17 +9,26 @@
 </head>
 <body>
     <div class="container">
-        <form action="" class="form-control">
+        <form class="form-control">
             <div>
                 <h1 class="display-4 text-center text-success">ClimaTempo</h1>
             </div>
-            <div class="d-flex d-flex justify-content-center">
-                <select class="form-control my-3 mx-3"  name="cidade" id="slCidade">
-                    <option value="catanduva,br">Catanduva-SP Brasil</option>
-                    <option value="tokyo,jp">Tókyo-KA Japão</option>
-                    <option value="berlin,de">Berlin Alemanha</option>
-                    <option value="rio+de+janeiro,br">Rio De Janeiro-SP Brasil</option>
-                </select>
+            <div class="">
+                <div class="d-flex justify-content-center align-itens-center w-75 mx-auto">
+                    <select class="form-control my-5 mx-5 p-3"  name="cidade" id="slCidade">
+                        <option value="catanduva,br">Catanduva-SP Brasil</option>
+                        <option value="tokyo,jp">Tókyo-KA Japão</option>
+                        <option value="berlin,de">Berlin Alemanha</option>
+                        <option value="rio+de+janeiro,br">Rio De Janeiro-SP Brasil</option>
+                    </select>
+                </div>
+                <div class="card-text text-center">
+                    <h2>Ceu: </h2> <p id="ceu"></p>
+                    <h2>Cidade: </h2> <p id="cidade"></p>
+                    <h2>Temperatura: </h2> <p id="temperatura"></p>
+                    <h2>Temp. Minima: </h2> <p id="tempMin"></p> 
+                    <h2>Temp. Máxima: </h2> <p id="tempMax"></p> 
+                </div>
             </div>
         </form>
     </div>
