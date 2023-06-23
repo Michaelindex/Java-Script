@@ -12,17 +12,19 @@
             <input type="text" name="valor1" id="valor1"> <br> <br> <br>
             <input type="text" name="valor2" id="valor2"> <br> <br> <br>
             <input type="submit" value="Enviar" onclick="soma()"> <br> <br> <br>
-            <input type="text" name="soma" id="soma" disabled style="width: 100px; height: 70px;">
+            <input type="text" name="soma" id="a" value="" disabled style="width: 140px; height: 70px; text-align: center; font-size: 1.5em;">
+            <h1 id="soma">a</h1>
         </div>
     </div>
 
     <script>
-        var valor1 = document.getElementById('valor1').value
-        var valor2 = document.getElementById('valor2').value
+        var valor1 = parseInt(document.getElementById('valor1').value)
+        var valor2 = parseInt(document.getElementById('valor2').value)
 
         function soma(){
-            var soma = valor1 + valor2
-
+            var soma = parseInt (valor1 + valor2)
+            document.getElementById('soma').innerHTML = soma
+            console.log(soma)
         }
     </script>
 </body>
