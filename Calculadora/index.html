@@ -18,17 +18,17 @@
         </div>
         <div id="coluna2">
             <button class="nNumeros" id="maismenos">+/-</button> <br>
-            <button class="numeros" id="oito">8</button> <br>
-            <button class="numeros" id="cinco">5</button> <br>
-            <button class="numeros" id="dois">2</button> <br>
-            <button class="numeros" id="zero">0</button> <br>
+            <button class="numeros" id="oito" onclick="numerosInteiros(8)">8</button> <br>
+            <button class="numeros" id="cinco" onclick="numerosInteiros(5)">5</button> <br>
+            <button class="numeros" id="dois" onclick="numerosInteiros(2)">2</button> <br>
+            <button class="numeros" id="zero" onclick="numerosInteiros(0)">0</button> <br>
         </div>
         <div id="coluna3">
             <button class="nNumeros" id="porcentagem">%</button> <br>
-            <button class="numeros" id="nove">9</button> <br>
-            <button class="numeros" id="seis">6</button> <br>
-            <button class="numeros" id="tres">3</button> <br>
-            <button class="numeros" id="ponto">.</button> <br>
+            <button class="numeros" id="nove" onclick="numerosInteiros(9)">9</button> <br>
+            <button class="numeros" id="seis" onclick="numerosInteiros(6)">6</button> <br>
+            <button class="numeros" id="tres" onclick="numerosInteiros(3)">3</button> <br>
+            <button class="numeros" id="ponto" onclick="numerosInteiros('.')">.</button> <br>
         </div>
         <div id="coluna4">
             <button class="nNumeros" id="dividido">/</button> <br>
@@ -39,7 +39,7 @@
         </div>
     </div>
     <div id="soma">
-        <h1></h1>
+        <h1 id="result"></h1>
     </div>
     <script src="script.js"></script>
 </body>

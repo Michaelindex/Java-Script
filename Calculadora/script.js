@@ -1,4 +1,6 @@
+var add = 0
 function numerosInteiros(numero){
-    var add = numero + add
+    add = String(add + numero)
+    document.getElementById('result').innerHTML = add
     console.log(add)
 }
