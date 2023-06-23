@@ -53,3 +53,11 @@ button:hover{
     margin: 15px 8px;
     cursor: pointer;
 }
+
+#soma{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 150px;
+    height: 100px;
+    border: 2px solid white;
+    
+}
