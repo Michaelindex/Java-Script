@@ -6,25 +6,6 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <div style="text-align: center;">
-        <h1>Calculadora</h1>
-        <div>
-            <input type="text" name="valor1" id="valor1"> <br> 
-            <H1>+</H1>
-            <input type="text" name="valor2" id="valor2"> <br> <br> <br>
-            <input type="submit" value="Enviar" onclick="soma()"> <br> <br> <br>
-            <h1 id="soma" style="padding: 15px; background-color: rgba(128, 128, 128, 0.445);">(VALOR)</h1>
-        </div>
-    </div>
 
-    <script>
-        function soma(){
-            var valor1 = parseInt(document.getElementById("valor1").value)
-            var valor2 = parseInt(document.getElementById("valor2").value)
-            var soma = parseInt (valor1 + valor2)
-            document.getElementById("soma").innerHTML = soma
-            console.log(soma)
-        }
-    </script>
 </body>
 </html>
