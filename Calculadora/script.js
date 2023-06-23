@@ -5,5 +5,5 @@ function numerosInteiros(numero){
 }
 
 function mais(){
-    
+    document.getElementById('result').innterHTML = String(add, '+')
 }
