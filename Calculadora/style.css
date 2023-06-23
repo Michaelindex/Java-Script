@@ -55,9 +55,12 @@ button:hover{
 }
 
 #soma{
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 150px;
+    background-color: gray;
+    width: 200px;
     height: 100px;
-    border: 2px solid white;
-    
+    border: 5px solid rgb(68, 68, 68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
 }
