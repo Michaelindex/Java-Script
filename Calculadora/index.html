@@ -11,8 +11,18 @@
         <div>
             <input type="text" name="valor1" id="valor1"> <br> <br> <br>
             <input type="text" name="valor2" id="valor2"> <br> <br> <br>
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar" onclick="soma()">
         </div>
     </div>
+
+    <script>
+        var valor1 = document.getElementById('valor1').value
+        var valor2 = document.getElementById('valor2').value
+
+        function soma(){
+            var soma = valor1 + valor2
+            
+        }
+    </script>
 </body>
 </html>
