@@ -27,6 +27,16 @@ header{
     filter: drop-shadow(1px 1px 1px white);
 }
 
+.alinhados img:hover{
+    filter: drop-shadow(1px 1px 1px #39A4AC);
+    transition: 0.5s;
+}
+
+.alinhados img:not(:hover){
+    filter: drop-shadow(1px 1px 1px white);
+    transition: 0.5s;
+}
+
 .navegacao nav ul{
     display: flex;
     justify-content: center;
@@ -43,7 +53,16 @@ header{
     text-decoration: none;
     color: white;
     font-weight: bolder;
-    padding: 15px;
+    padding: 5px;
     font-size: 1.05em;
 }
 
+.navegacao nav ul li a:hover{
+    color: black;
+    transition: 0.5s;
+}
+
+.navegacao nav ul li a:not(:hover){
+    color: white;
+    transition: 0.5s;
+}
