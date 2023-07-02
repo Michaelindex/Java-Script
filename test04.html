@@ -37,9 +37,9 @@
     <div class="corpo">
         <h1>CALCULANDO</h1>
         <div style="margin: 30px;">
-            <input type="text">
+            <input type="text" id="num1">
             <span>+</span>
-            <input type="text">
+            <input type="text" id="num2">
         </div>
         <div id="telinha">
             <h1 id="num"></h1>
@@ -47,7 +47,9 @@
     </div>
 
     <script>
-        var telinha = document.getElementById('num').innerHTML = "ola"
+        var num1 = document.getElementById('num1').value
+        var num2 = document.getElementById('num2').value
+        var telinha = document.getElementById('num').innerHTML = "  "
     </script>
 </body>
 </html>
