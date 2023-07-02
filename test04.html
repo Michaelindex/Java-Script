@@ -17,14 +17,14 @@
             align-items: center;
             flex-direction: column;
         }
-        .telinha{
+        #telinha{
             width: 250px;
             height: 100px;
             border: 2px solid black;
             border-radius: 10px;
             background-color: rgba(89, 255, 73, 0.5);
         }
-        .telinha h1{
+        #telinha h1{
             width: 250px;
             height: 100px;
             display: flex;
@@ -37,9 +37,12 @@
     <div class="corpo">
         <h1>CALCULANDO</h1>
 
-        <div class="telinha">
+        <div id="telinha">
             <h1></h1>
         </div>
     </div>
+    <script>
+        var telinha = document.getElementById('telinha')
+    </script>
 </body>
 </html>
